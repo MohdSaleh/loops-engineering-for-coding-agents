@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Maker Packet v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "goal_id",
+    "project_id",
+    "project_root",
+    "goal_raw",
+    "task",
+    "allowed_write_paths",
+    "denied_write_paths",
+    "completion_conditions",
+    "baseline_git_sha",
+    "baseline_git_tree",
+    "context_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "goal_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "project_root": {
+      "type": "string"
+    },
+    "goal_raw": {
+      "type": "string"
+    },
+    "task": {
+      "type": "object"
+    },
+    "allowed_write_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "denied_write_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completion_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "baseline_git_sha": {
+      "type": "string"
+    },
+    "baseline_git_tree": {
+      "type": "string"
+    },
+    "context_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

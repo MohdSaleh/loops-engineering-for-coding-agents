@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loop Event v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "seq",
+    "event_id",
+    "timestamp",
+    "run_id",
+    "type",
+    "actor",
+    "payload",
+    "prev_event_hash",
+    "event_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "goal_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "RUN_BOOTED",
+        "VISION_OBSERVED",
+        "VISION_ACCEPTED",
+        "USER_PROMPT_RECEIVED",
+        "GOAL_CREATED",
+        "TASK_STARTED",
+        "MAKER_ATTEMPT_FINISHED",
+        "VERIFICATION_PASSED",
+        "VERIFICATION_FAILED",
+        "STOP_GATE_RECORDED",
+        "KG_STAGE_CREATED",
+        "KG_STAGE_VALIDATED",
+        "KG_PROMOTED",
+        "GOAL_COMPLETED",
+        "GOAL_ESCALATED",
+        "GOAL_ABANDONED",
+        "WARNING_RECORDED",
+        "HUMAN_RESOLUTION_RECORDED",
+        "PROJECT_COMPLETED"
+      ]
+    },
+    "actor": {
+      "enum": [
+        "orchestrator",
+        "maker",
+        "verifier",
+        "validator",
+        "human",
+        "system",
+        "kg_builder",
+        "protocol_maintainer"
+      ]
+    },
+    "git_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "git_tree": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "prev_event_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

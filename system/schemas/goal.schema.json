@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User Goal Contract v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "goal_kind",
+    "project_id",
+    "goal_raw",
+    "intent_summary",
+    "requirements_affected",
+    "allowed_write_paths",
+    "denied_write_paths",
+    "completion_conditions",
+    "assumptions",
+    "status",
+    "system_change_authorized"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "prompt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal_kind": {
+      "enum": [
+        "PROJECT_CREATE",
+        "PROJECT_TASK",
+        "PROJECT_MAINTENANCE",
+        "SYSTEM_MAINTENANCE"
+      ]
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "goal_raw": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requirements_affected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_write_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "denied_write_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completion_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "condition_id",
+          "type",
+          "description"
+        ],
+        "properties": {
+          "condition_id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "command": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expected_exit_code": {
+            "type": "integer"
+          },
+          "path": {
+            "type": "string"
+          },
+          "expected_state": {},
+          "metric": {
+            "type": "string"
+          },
+          "operator": {
+            "enum": [
+              ">=",
+              "<=",
+              "==",
+              ">",
+              "<"
+            ]
+          },
+          "threshold": {
+            "type": "number"
+          },
+          "metric_regex": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "BLOCKED"
+      ]
+    },
+    "system_change_authorized": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source KG Edge v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "from",
+    "to",
+    "project_id",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "CONTAINS",
+        "DEFINES",
+        "IMPORTS",
+        "CALLS",
+        "INHERITS",
+        "IMPLEMENTS",
+        "READS",
+        "WRITES",
+        "EXPOSES",
+        "TESTED_BY",
+        "SATISFIES",
+        "CHANGED_BY",
+        "VERIFIED_BY",
+        "OBSERVED_IN",
+        "SUPERSEDES"
+      ]
+    },
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "attributes": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    }
+  }
+}

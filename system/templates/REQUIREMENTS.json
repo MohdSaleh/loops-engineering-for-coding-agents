@@ -1,0 +1,16 @@
+{
+  "schema_version": "3.0",
+  "project_id": "main",
+  "requirements": [
+    {
+      "requirement_id": "R001",
+      "title": "Define the first product requirement",
+      "description": "Replace this placeholder with the first mandatory capability.",
+      "priority": "MUST",
+      "status": "OPEN",
+      "acceptance_conditions": [],
+      "goal_ids": [],
+      "evidence_refs": []
+    }
+  ]
+}

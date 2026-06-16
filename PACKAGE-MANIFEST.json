@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "package": "loop-engineering-v3.0",
+  "file_count": 46,
+  "total_bytes": 116941,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 819,
+      "sha256": "23b87878359ff5c6fea8d1dd24f596055ec32456d1700e91c3b7d4caedb15ad8"
+    },
+    {
+      "path": "DEPLOYMENT-GUIDE.md",
+      "bytes": 1332,
+      "sha256": "c9fb37a30da678069f4d2b651aa1b286f89debc87aa443df570de88539aa847a"
+    },
+    {
+      "path": "MIGRATION-v2.1-to-v3.0.md",
+      "bytes": 1366,
+      "sha256": "f88c78335b80658c4f437cb4cd0655889d426dbb0d9a377759353efb49719595"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4312,
+      "sha256": "13ce93e84de1dcf5039a83d77054a00e2a84091828aa3c4de9f4754c89b925bb"
+    },
+    {
+      "path": "SYSTEM-ARCHITECTURE.md",
+      "bytes": 798,
+      "sha256": "60401b2ee523fb437c8c004d2caad1b00f67489389db5e8adceaf83e56829faf"
+    },
+    {
+      "path": "SYSTEM-FILE-MAP.md",
+      "bytes": 1419,
+      "sha256": "1bf03d2e60ccacc077d57357d8ef6ceab6c633fff050255d94c4c33f3347c5d6"
+    },
+    {
+      "path": "VALIDATION-REPORT.md",
+      "bytes": 2675,
+      "sha256": "204072ce5316d68e80e50bcfb4d8a4c00c6289521220a85a8cafb4057d9d2769"
+    },
+    {
+      "path": "examples/goal.project-task.json",
+      "bytes": 779,
+      "sha256": "5c5f3424e48bd1da44690d3f41fc470a52bcaa50cb24e1944770a550d5316bfe"
+    },
+    {
+      "path": "install.py",
+      "bytes": 5340,
+      "sha256": "2cd4d1a9d0687538f04b7d1e71ba8298f369cc53b8298f6c253b7e7940296204"
+    },
+    {
+      "path": "system/protocol/LOOP-ENGINEERING-v3.0.md",
+      "bytes": 16945,
+      "sha256": "150d1b207add0dfd345310b0f330ddaf7382dd453fc309ed78239e68412c5277"
+    },
+    {
+      "path": "system/schemas/event.schema.json",
+      "bytes": 2272,
+      "sha256": "1b431a98dc6fea07ef11f53d54e3eeb49f43f674b0f06a56b9fc58a9b00a0de7"
+    },
+    {
+      "path": "system/schemas/goal.schema.json",
+      "bytes": 2842,
+      "sha256": "a2b5c469f275b32a8c90aea8fc0cf8647ef598755351199df324c2aac836ec9d"
+    },
+    {
+      "path": "system/schemas/kg-edge.schema.json",
+      "bytes": 898,
+      "sha256": "c11ffd02015374f14553d8f4133c7e29a3dcf034becb061af9f643409e62ef70"
+    },
+    {
+      "path": "system/schemas/kg-manifest.schema.json",
+      "bytes": 1748,
+      "sha256": "bb988e3c4860809b59fae76a17889bfcb399692135f8f6d4f6bc8a8c3870474d"
+    },
+    {
+      "path": "system/schemas/kg-node.schema.json",
+      "bytes": 1919,
+      "sha256": "a473a265ff3f4baa37682add4b34c52d8b8af375b99a322ec231ed32e1297b48"
+    },
+    {
+      "path": "system/schemas/maker-packet.schema.json",
+      "bytes": 1283,
+      "sha256": "3430f3b64e518bb12b1b3e3131528482d07b8097a654124099babcb406d50ea4"
+    },
+    {
+      "path": "system/schemas/project-status.schema.json",
+      "bytes": 713,
+      "sha256": "300cf373057f30e3a3588c08ad09fded8ce823ed6d9fac621def89b4a6762f74"
+    },
+    {
+      "path": "system/schemas/requirements.schema.json",
+      "bytes": 1853,
+      "sha256": "b06d44f3b6e7591ef344b038ca8ab8f105e8ffc63cca03eb56dbc0ae1b9497cb"
+    },
+    {
+      "path": "system/schemas/state.schema.json",
+      "bytes": 1239,
+      "sha256": "6ef48889c52395d87fe6f1e0708494f12494c211b3162aac2b0fa00d484c8895"
+    },
+    {
+      "path": "system/schemas/verifier-packet.schema.json",
+      "bytes": 1340,
+      "sha256": "a731ec561906fd0dc3223f4ff909bec67170406253fd2cf727910a5e91671f1d"
+    },
+    {
+      "path": "system/schemas/versions.schema.json",
+      "bytes": 650,
+      "sha256": "d700bfe1edab61c32b7b03324acbaa745096be1a0a55dd57323fe2e321cc6604"
+    },
+    {
+      "path": "system/schemas/workspace.schema.json",
+      "bytes": 3823,
+      "sha256": "a35492228ab7cb6e62b358003df750c80502ea717d082d0df56b5502f8410abe"
+    },
+    {
+      "path": "system/scripts/agenticctl.py",
+      "bytes": 3787,
+      "sha256": "9db79f1b9269b5adcbe5ef5418b3520bdd55e68d6b8b9677c9afdeb5089e92aa"
+    },
+    {
+      "path": "system/scripts/append_event.py",
+      "bytes": 915,
+      "sha256": "37a30ff3ca835f7ec59b93be0e0fc8649c308e8c479cdb76523aa0ba2f998ef4"
+    },
+    {
+      "path": "system/scripts/build_packets.py",
+      "bytes": 1994,
+      "sha256": "58fdb2ef6e924689205e6c6002200248d00426092048b176cd10fc4c5a4e666b"
+    },
+    {
+      "path": "system/scripts/common.py",
+      "bytes": 2845,
+      "sha256": "3c650887ad0bb2fffa81cdb6d4735212116663b054773ed94c8853c75d3640a6"
+    },
+    {
+      "path": "system/scripts/event_store.py",
+      "bytes": 2643,
+      "sha256": "a9074f1677dfbf7a3d6872645b13a2fe89a894f7b1e54c668a398083674167e7"
+    },
+    {
+      "path": "system/scripts/kg.py",
+      "bytes": 7637,
+      "sha256": "5d9d44bd3647c5356a8735e51dd8818e5be4875c56303943ac61d50fd6daf62f"
+    },
+    {
+      "path": "system/scripts/rebuild_projections.py",
+      "bytes": 7302,
+      "sha256": "95c85585c22e72881ac0f1e1d24b2c712769483c684e4dda61ba348830152fe6"
+    },
+    {
+      "path": "system/scripts/record_attempt.py",
+      "bytes": 1141,
+      "sha256": "a55be61c19b88846eec41f2ee24ae8258d0374409b95c5d4ae2f3a2f955fb47a"
+    },
+    {
+      "path": "system/scripts/register_goal.py",
+      "bytes": 4456,
+      "sha256": "d8279e356643883aad79bd1b20db109493b502c208e9fdf30276db79e20c1a7e"
+    },
+    {
+      "path": "system/scripts/requirements.txt",
+      "bytes": 20,
+      "sha256": "4046ca1e3a64f4ea791fb4fb3d8566242086ff1c8e2431e2c349e1052ffc6ba0"
+    },
+    {
+      "path": "system/scripts/stop_gate.py",
+      "bytes": 2151,
+      "sha256": "ac920cae22148a6f22efd801c482c741355e633b6d01aaad929749ca8d1d19d5"
+    },
+    {
+      "path": "system/scripts/transition.py",
+      "bytes": 2659,
+      "sha256": "b10f1d5c0bf180e6f34c7f7321ce1630c63d2dc3c7e227b28ff42b79faf70323"
+    },
+    {
+      "path": "system/scripts/validate_system.py",
+      "bytes": 6096,
+      "sha256": "a0b1ccbb6a837670a8fc3e271f1f5c5bde8686ceab1f931d94a947a91c27c3f8"
+    },
+    {
+      "path": "system/scripts/verify_goal.py",
+      "bytes": 3325,
+      "sha256": "70e4e576731c27caa5a1d49fb5d2c1c0a904d6e38c19d230d7beb279651bd0a8"
+    },
+    {
+      "path": "system/scripts/verify_scope.py",
+      "bytes": 1747,
+      "sha256": "0e3382127b160a9752dab2207efe5abfa7111b173c379aacac261e5fd0c5a675"
+    },
+    {
+      "path": "system/templates/AGENTS.md",
+      "bytes": 1152,
+      "sha256": "a4558e54d665f906e4872e6151831f184b1ac8e4ed041da680d7f83813d5410f"
+    },
+    {
+      "path": "system/templates/PROJECT-SPEC.md",
+      "bytes": 765,
+      "sha256": "08c05e3a778762254e831e30a76c9b321c7b1d7586dc5198920af78f3a44f364"
+    },
+    {
+      "path": "system/templates/REQUIREMENTS.json",
+      "bytes": 397,
+      "sha256": "b96056ec5a2af0b6179294b2ea40a551e108bff4e990647aa4e787b2e375ee89"
+    },
+    {
+      "path": "system/templates/VISION.md",
+      "bytes": 781,
+      "sha256": "825b64420b14d31de95baffbb84d0f786371d63cc3924284b9d9c196f5283234"
+    },
+    {
+      "path": "system/templates/loop-validation.json",
+      "bytes": 93,
+      "sha256": "1179a9faab22a7da3fa51801e4aa1f486250f074fe3f7d9bcfb1706759113369"
+    },
+    {
+      "path": "system/templates/workspace.json",
+      "bytes": 1826,
+      "sha256": "349229d61089e8780068bc072a0fc32e1e1ea28c2f81965f3e48e5f7022e11ec"
+    },
+    {
+      "path": "tests/test_full_cycle.py",
+      "bytes": 2767,
+      "sha256": "62631c14a46b472df548ae175f523a6c56075433f84e76d25e55d28cb7a6ec87"
+    },
+    {
+      "path": "tests/test_goal_lifecycle.py",
+      "bytes": 2741,
+      "sha256": "064494519fa4c79225dd462cf4d668ac020a1bdf2b5f7cef17296d002ce303ba"
+    },
+    {
+      "path": "tests/test_install_and_boundary.py",
+      "bytes": 1336,
+      "sha256": "82c9d381f5fb3c2c9f15ce3ded23730a405ee1b3a126a801f3baaf85d04d3eca"
+    }
+  ]
+}

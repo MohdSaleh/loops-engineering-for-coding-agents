@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Requirement Ledger v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "requirements"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "requirement_id",
+          "title",
+          "description",
+          "priority",
+          "status",
+          "acceptance_conditions",
+          "goal_ids",
+          "evidence_refs"
+        ],
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "pattern": "^R[0-9]{3,}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "priority": {
+            "enum": [
+              "MUST",
+              "SHOULD",
+              "COULD",
+              "WONT"
+            ]
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "IN_PROGRESS",
+              "IMPLEMENTED",
+              "VERIFIED",
+              "BLOCKED",
+              "DEFERRED"
+            ]
+          },
+          "acceptance_conditions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "goal_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}

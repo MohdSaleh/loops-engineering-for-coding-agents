@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KG Manifest v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kg_version",
+    "status",
+    "goal_id",
+    "project_id",
+    "git_sha",
+    "git_tree",
+    "generated_at",
+    "extractors",
+    "counts",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "kg_version": {
+      "type": "string",
+      "pattern": "^kg-[0-9]{6}$"
+    },
+    "status": {
+      "enum": [
+        "STAGING",
+        "PROMOTED"
+      ]
+    },
+    "goal_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "git_sha": {
+      "type": "string"
+    },
+    "git_tree": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "extractors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "integer"
+        },
+        "edges": {
+          "type": "integer"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ]
+        },
+        "edges": {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ]
+        },
+        "projections": {
+          "type": "object",
+          "required": [
+            "path",
+            "sha256"
+          ]
+        }
+      }
+    }
+  }
+}

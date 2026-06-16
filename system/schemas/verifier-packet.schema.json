@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verifier Packet v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "goal_id",
+    "project_id",
+    "project_root",
+    "completion_conditions",
+    "allowed_write_paths",
+    "denied_write_paths",
+    "baseline_git_sha",
+    "baseline_git_tree",
+    "candidate_git_sha",
+    "candidate_git_tree",
+    "forbidden_context"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "goal_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "project_root": {
+      "type": "string"
+    },
+    "completion_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "allowed_write_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "denied_write_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "baseline_git_sha": {
+      "type": "string"
+    },
+    "baseline_git_tree": {
+      "type": "string"
+    },
+    "candidate_git_sha": {
+      "type": "string"
+    },
+    "candidate_git_tree": {
+      "type": "string"
+    },
+    "forbidden_context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

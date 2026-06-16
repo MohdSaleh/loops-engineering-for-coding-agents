@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source KG Node v3.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "name",
+    "project_id",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "Project",
+        "Module",
+        "File",
+        "Symbol",
+        "Class",
+        "Function",
+        "Method",
+        "Type",
+        "Endpoint",
+        "Table",
+        "Config",
+        "Test",
+        "Requirement",
+        "Goal",
+        "Commit",
+        "RuntimeEvent",
+        "Issue"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "attributes": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "extractor",
+        "extractor_version",
+        "git_sha",
+        "git_tree",
+        "generated_at"
+      ],
+      "properties": {
+        "extractor": {
+          "type": "string"
+        },
+        "extractor_version": {
+          "type": "string"
+        },
+        "source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_line": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "end_line": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "file_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "git_sha": {
+          "type": "string"
+        },
+        "git_tree": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

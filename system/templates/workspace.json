@@ -1,0 +1,98 @@
+{
+  "schema_version": "3.0",
+  "workspace_id": "replace-me",
+  "mode": "embedded",
+  "workspace_root": ".",
+  "control_root": ".agentic",
+  "instruction_entrypoint": "AGENTS.md",
+  "default_project_id": "main",
+  "projects": [
+    {
+      "project_id": "main",
+      "root": ".",
+      "command_cwd": ".",
+      "source_roots": [
+        "src"
+      ],
+      "test_roots": [
+        "tests"
+      ],
+      "documentation_roots": [
+        "docs"
+      ],
+      "asset_roots": [
+        "public"
+      ],
+      "config_files": [],
+      "validation_profile": "default",
+      "kg_adapters": []
+    }
+  ],
+  "ownership": [
+    {
+      "pattern": "AGENTS.md",
+      "class": "CONTROL_PLANE",
+      "write_roles": [
+        "installer",
+        "protocol_maintainer"
+      ]
+    },
+    {
+      "pattern": ".agentic/runtime/**",
+      "class": "RUNTIME_STATE",
+      "write_roles": [
+        "orchestrator"
+      ]
+    },
+    {
+      "pattern": ".agentic/knowledge/**",
+      "class": "KNOWLEDGE_GENERATED",
+      "write_roles": [
+        "kg_builder",
+        "orchestrator"
+      ]
+    },
+    {
+      "pattern": ".agentic/**",
+      "class": "CONTROL_PLANE",
+      "write_roles": [
+        "installer",
+        "protocol_maintainer"
+      ]
+    },
+    {
+      "pattern": "**",
+      "class": "PROJECT",
+      "write_roles": [
+        "maker",
+        "human"
+      ]
+    }
+  ],
+  "protected_paths": [
+    ".git/**",
+    ".env",
+    ".env.*",
+    "**/secrets/**",
+    "**/production/**"
+  ],
+  "generated_paths": [
+    "dist/**",
+    "build/**",
+    ".next/**",
+    "coverage/**",
+    "__pycache__/**",
+    "*.pyc"
+  ],
+  "kg_exclude": [
+    ".git/**",
+    ".agentic/**",
+    "dist/**",
+    "build/**",
+    ".next/**",
+    "coverage/**",
+    "node_modules/**",
+    ".venv/**"
+  ],
+  "system_change_requires_explicit_goal": true
+}

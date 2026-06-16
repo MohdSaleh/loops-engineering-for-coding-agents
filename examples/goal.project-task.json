@@ -1,0 +1,37 @@
+{
+  "schema_version": "3.0",
+  "prompt_id": "P001",
+  "goal_kind": "PROJECT_TASK",
+  "project_id": "main",
+  "goal_raw": "Add a health endpoint and tests.",
+  "intent_summary": "Expose a deterministic health endpoint without changing unrelated behavior.",
+  "requirements_affected": [
+    "R001"
+  ],
+  "allowed_write_paths": [
+    "src/**",
+    "tests/**"
+  ],
+  "denied_write_paths": [
+    ".agentic/**",
+    "AGENTS.md",
+    ".env*"
+  ],
+  "completion_conditions": [
+    {
+      "condition_id": "C1",
+      "type": "A",
+      "description": "Project tests pass",
+      "command": [
+        "python3",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "expected_exit_code": 0
+    }
+  ],
+  "assumptions": [],
+  "status": "READY",
+  "system_change_authorized": false
+}

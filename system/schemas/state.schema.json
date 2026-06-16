@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loop State Projection v3.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "projection",
+    "run_id",
+    "status",
+    "current_goal_id",
+    "current_task_id",
+    "vision",
+    "budget",
+    "attempts",
+    "warnings",
+    "waiting_for_human"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "projection": {
+      "type": "object"
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "IDLE",
+        "IN_PROGRESS",
+        "VERIFYING",
+        "FINALIZING",
+        "COMPLETED",
+        "ESCALATED",
+        "ABANDONED"
+      ]
+    },
+    "current_goal_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vision": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object"
+    },
+    "attempts": {
+      "type": "object"
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "waiting_for_human": {
+      "type": "array"
+    },
+    "summary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
